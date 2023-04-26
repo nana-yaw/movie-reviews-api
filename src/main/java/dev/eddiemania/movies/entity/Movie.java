@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;;import j
 @NoArgsConstructor
 public class Movie {
     @Id
-    private ObjectId id;
+    protected ObjectId id;
     private String imdbId;
     private String title;
     private String releaseDate;
