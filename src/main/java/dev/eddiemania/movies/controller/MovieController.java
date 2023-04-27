@@ -15,11 +15,11 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/movies")
+@RequestMapping(value = "/api/v1/movies", produces = "application/json")
 public class MovieController {
     @Autowired
     private MovieService movieService;
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<Movie>> getAllMovies() {
         return new ResponseEntity<>(movieService.allMovies(), HttpStatus.OK);
     }
